@@ -1,0 +1,15 @@
+.covidIcon {
+	margin-top: -5px;
+	height : 28px;
+	width : 40px;
+}
+.micBox {
+	width : 30%;
+}
+.micGif {
+	width : 100%;
+}
+.card-png {
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+}

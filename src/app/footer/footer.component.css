@@ -1,0 +1,29 @@
+.footer {
+   position: relative;
+   top: 0px;
+   left: 0px;
+   bottom: 0px !important;
+   width: 100%;
+   color: black;
+   text-align: left;
+   border-radius : 0px !important;
+}
+.innerFooter {
+	border-top : 2px solid purple;
+	background-color : transparent;
+}
+.socialIcon {
+	width : 20px;
+}
+.socialIconBtn {
+	 width : 40px;;
+}
+.socialIconsDiv {
+	margin-top : -40px !important;
+}
+@media (max-width : 680px){
+	
+	.socialIconsDiv {
+		margin-top : -15px !important;
+	}
+}
