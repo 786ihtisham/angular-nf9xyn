@@ -9,7 +9,7 @@ export class HomeComponent implements OnInit {
   //for making steps 
   private stepper: Stepper;
   //for boxes section
-  doctorGif = "assets/gifs/doctor1.gif";
+  doctorGif = "/assets/gifs/doctor1.gif";
   voiceOne = "";
   voiceError = "Your browser does not support the audio element.";
   //covid icon
