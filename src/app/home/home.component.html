@@ -1,0 +1,182 @@
+<div class="w-50 mx-auto mt-3">
+	<div class="mx-auto w-25">
+		<img [src]="doctorGif" class="img-fluid doctor"/>
+	</div>
+</div>
+<div class="jumbotron rounded-0 background text-white topCustomBox">
+	<div class="jumbotron rounded-0 w-100 mx-auto shadow-2 customBox">
+		
+		<!-- Horizontal Steppers -->
+		<div class="bs-stepper" id="stepper1">
+		  <div class="row  mt-n4">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				 <div class="bs-stepper-header" role="tablist">
+					<!-- your steps here -->
+					<div class="step" data-target="#logins-part">
+					  <button type="button" class="step-trigger" role="tab" aria-controls="logins-part" id="logins-part-trigger"
+								(click)="changeTypeWriterText('step1')">
+						<span class="bs-stepper-circle rounded-0 bg-success shadow-1">
+							<mdb-icon fas icon="user" class="prefix"></mdb-icon>
+						</span>
+						<span class="bs-stepper-label"></span>
+					  </button>
+					</div>
+					<div class="line bg-light" id="line1"></div>
+					<div class="step" data-target="#information-part" id="step2">
+					  <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger" 
+							(click)="changeTypeWriterText('step2')">
+						<span class="bs-stepper-circle rounded-0 bg-success shadow-1">
+							<mdb-icon fas icon="plane" class="prefix"></mdb-icon>
+						</span>
+						<span class="bs-stepper-label"></span>
+					  </button>
+					</div>
+					
+					<div class="line bg-light" id="line2"></div>
+					<div class="step" data-target="#information-part-2" id="step3">
+					  <button type="button" (click)="changeTypeWriterText('step3')" 
+								class="step-trigger" role="tab" aria-controls="information-part-2" id="information-part-trigger-2">
+						<span class="bs-stepper-circle rounded-0 bg-success shadow-1">
+							<mdb-icon fas icon="skull-crossbones" class="prefix"></mdb-icon>
+						</span>
+						<span class="bs-stepper-label"></span>
+					  </button>
+					</div>
+					
+					<div class="line bg-light" id="line3"></div>
+					<div class="step" data-target="#information-part" id="step4">
+					  <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
+						<span class="bs-stepper-circle rounded-0 bg-success shadow-1">
+							<img [src]="covidIcon" class="img-fluid covidIcon">
+						</span>
+						<span class="bs-stepper-label"></span>
+					  </button>
+					</div>
+					<div class="line bg-light" id="line4"></div>
+					<div class="step" data-target="#information-part" id="step5">
+					  <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
+						<span class="bs-stepper-circle rounded-0 bg-success shadow-1">
+							<mdb-icon fas icon="user-md" class="prefix"></mdb-icon>
+						</span>
+						<span class="bs-stepper-label"></span>
+					  </button>
+					</div>
+					
+				  </div>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-n4">
+				<div class="bs-stepper-header" role="tablist">
+					<div class="step" data-target="#information-part" id="step6">
+					  <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
+						<span class="bs-stepper-circle rounded-0 bg-success shadow-1">
+							<mdb-icon fas icon="thermometer-full" class="prefix"></mdb-icon>
+						</span>
+						<span class="bs-stepper-label"></span>
+					  </button>
+					</div>
+					<div class="line bg-light" id="line6"></div>
+					<div class="step" data-target="#information-part" id="step7">
+					  <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
+						<span class="bs-stepper-circle rounded-0 bg-success shadow-1">
+							<img [src]="coughIcon" class="img-fluid covidIcon">
+						</span>
+						<span class="bs-stepper-label"></span>
+					  </button>
+					</div>
+					<div class="line bg-light" id="line7"></div>
+					<div class="step" data-target="#information-part" id="step8">
+					  <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
+						<span class="bs-stepper-circle rounded-0 bg-success shadow-1">
+							<img [src]="fatigueIcon" class="img-fluid covidIcon">
+						</span>
+						<span class="bs-stepper-label"></span>
+					  </button>
+					</div>
+					<div class="line bg-light" id="line8"></div>
+					<div class="step" data-target="#information-part" id="step9">
+					  <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
+						<span class="bs-stepper-circle rounded-0 bg-success shadow-1">
+							<img [src]="breathingdifficultyIcon" class="img-fluid covidIcon">
+						</span>
+						<span class="bs-stepper-label"></span>
+					  </button>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="bs-stepper-content">
+			<!-- your steps content here -->
+			<div id="logins-part" class="content fade" role="tabpanel" aria-labelledby="logins-part-trigger">
+				<div class="jumbotron customBox mx-auto w-75 rounded-0 text-light"> 
+					<h4 class="text-center text-light mt-n3"> {{typewriter_display }} </h4>
+					<div class="md-form form-sm ">
+					  <mdb-icon fas icon="user" class="prefix"></mdb-icon>
+					  <input mdbInput #name type="text" id="form1" class="form-control form-control-sm text-white">
+					  <label for="form1" class=""> Name ..</label>
+					</div>
+					<div class="md-form form-sm ">
+					  <mdb-icon fas icon="user-circle" class="prefix"></mdb-icon>
+					  <input mdbInput type="number" #age id="form1" class="form-control form-control-sm text-white">
+					  <label for="form1" class=""> Age.. </label>
+					</div>
+					<div class="mx-auto w-25" >
+						<div class="" >
+							<button (click)="validate(name.value,age.value);changeTypeWriterText('step2')" type="button" class="step-trigger text-white pt-3 pb-3"   mdbBtn color="success" mdbWavesEffect>
+								 <mdb-icon fas icon="arrow-right" size="lg" class="prefix"></mdb-icon>
+							</button>
+						</div>
+					</div>
+					<div class="container">
+						<div *ngIf="errorMessage == 'step1Error' " class="alert alert-danger"> 
+							{{errorAlert}} 
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
+				<div class="jumbotron customBox mx-auto w-75 rounded-0 text-light">
+					<h4 class="text-center text-light mt-n3"> {{typewriter_display }} </h4>
+					<div class="mx-auto micBox">
+						<img [src]="micGif" class="img-fluid mx-auto micGif card-png" />
+						<h4 class="text-center text-secondary"> Listening ... </h4>
+					</div>
+					<div class="mx-auto w-25" >
+						<div class="" >
+							<button (click)="prevBlock();changeTypeWriterText('step1')"  type="button" class="step-trigger text-white pt-3 pb-3"   mdbBtn color="success" mdbWavesEffect>
+								 <mdb-icon fas icon="arrow-left" size="lg" class="prefix"></mdb-icon>
+							</button>
+							<button (click)="nextBlock();changeTypeWriterText('step3')" type="button" class="step-trigger text-white pt-3 pb-3"   mdbBtn color="success" mdbWavesEffect>
+								 <mdb-icon fas icon="arrow-right" size="lg" class="prefix"></mdb-icon>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="information-part-2" class="content" role="tabpanel" aria-labelledby="information-part-trigger-2">
+				<div class="jumbotron customBox mx-auto w-75 rounded-0 text-light">
+					<h4 class="text-center text-light mt-n3"> {{typewriter_display }} chanegd</h4>
+					<div class="mx-auto micBox">
+						<img [src]="micGif" class="img-fluid mx-auto micGif card-png" />
+						<h4 class="text-center text-secondary"> Listening ... </h4>
+					</div>
+					<div class="mx-auto w-25" >
+						<div class="" >
+							<button (click)="prevBlock()" type="button" class="step-trigger text-white pt-3 pb-3"   mdbBtn color="success" mdbWavesEffect>
+								 <mdb-icon fas icon="arrow-left" size="lg" class="prefix"></mdb-icon>
+							</button>
+							<button (click)="nextBlock()" type="button" class="step-trigger text-white pt-3 pb-3"   mdbBtn color="success" mdbWavesEffect>
+								 <mdb-icon fas icon="arrow-right" size="lg" class="prefix"></mdb-icon>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		  </div>
+			</div>
+		  </div>
+		  
+		</div>
+		<!-- /.Horizontal Steppers -->
+	</div>
+</div>
+<app-footer></app-footer>
