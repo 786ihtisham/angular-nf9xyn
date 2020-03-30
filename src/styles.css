@@ -16,6 +16,24 @@ body {
 .customBox {
 	background-color: #00000045 !important;
 }
+@media (max-width : 700px){
+  .customBox{
+      width : 100%;
+  }
+  .line {
+    flex-grow: 0
+     !important; 
+  }
+  #stepper1 {
+    margin-top: 50px !important;
+  }
+  .doctorDiv{
+    width:70% !important;
+  }
+  .doctor {
+    width : 100% !important;
+  }
+}
 .shadow-1 {
 	box-shadow : 0 1rem 3rem rgba(0,0,0,1.175)!important;
 }
@@ -32,3 +50,4 @@ body {
 	box-shadow : 0 1rem 1rem rgba(0,0,0,0.375)!important;
 }
 /* gif styling ends*/
+/*stepper customization*/

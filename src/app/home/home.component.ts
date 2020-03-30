@@ -1,11 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import Stepper from 'bs-stepper';
+import { faUser,faUserCircle,faPlane,faSkullCrossbones,faUserMd,faThermometerFull,faArrowLeft,faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  //font-awsome icons 
+  faUser = faUser;faUserCircle = faUserCircle; faUserMd = faUserMd ;faThermometerFull= faThermometerFull;faArrowRight = faArrowRight; faArrowLeft = faArrowLeft;
+  faPlane = faPlane; faSkullCrossbones = faSkullCrossbones;
   //for making steps 
   private stepper: Stepper;
   //for boxes section

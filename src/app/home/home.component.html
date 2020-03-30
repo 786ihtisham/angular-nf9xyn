@@ -1,5 +1,5 @@
 <div class="w-50 mx-auto mt-3">
-	<div class="mx-auto w-25">
+	<div class="mx-auto doctorDiv w-25 ">
 		<img [src]="doctorGif" class="img-fluid doctor"/>
 	</div>
 </div>
@@ -8,7 +8,8 @@
 		
 		<!-- Horizontal Steppers -->
 		<div class="bs-stepper" id="stepper1">
-		  <div class="row  mt-n4">
+		  <div class="row  mt-n4 ">
+      
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				 <div class="bs-stepper-header" role="tablist">
 					<!-- your steps here -->
@@ -16,7 +17,8 @@
 					  <button type="button" class="step-trigger" role="tab" aria-controls="logins-part" id="logins-part-trigger"
 								(click)="changeTypeWriterText('step1')">
 						<span class="bs-stepper-circle rounded-0 bg-success shadow-1">
-							<mdb-icon fas icon="user" class="prefix"></mdb-icon>
+             <fa-icon [icon]="faUser"></fa-icon>
+
 						</span>
 						<span class="bs-stepper-label"></span>
 					  </button>
@@ -26,7 +28,7 @@
 					  <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger" 
 							(click)="changeTypeWriterText('step2')">
 						<span class="bs-stepper-circle rounded-0 bg-success shadow-1">
-							<mdb-icon fas icon="plane" class="prefix"></mdb-icon>
+							<fa-icon [icon]="faPlane"></fa-icon>
 						</span>
 						<span class="bs-stepper-label"></span>
 					  </button>
@@ -37,7 +39,7 @@
 					  <button type="button" (click)="changeTypeWriterText('step3')" 
 								class="step-trigger" role="tab" aria-controls="information-part-2" id="information-part-trigger-2">
 						<span class="bs-stepper-circle rounded-0 bg-success shadow-1">
-							<mdb-icon fas icon="skull-crossbones" class="prefix"></mdb-icon>
+							<fa-icon [icon]="faSkullCrossbones"></fa-icon>
 						</span>
 						<span class="bs-stepper-label"></span>
 					  </button>
@@ -56,7 +58,7 @@
 					<div class="step" data-target="#information-part" id="step5">
 					  <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
 						<span class="bs-stepper-circle rounded-0 bg-success shadow-1">
-							<mdb-icon fas icon="user-md" class="prefix"></mdb-icon>
+							<fa-icon [icon]="faUserMd"></fa-icon>
 						</span>
 						<span class="bs-stepper-label"></span>
 					  </button>
@@ -69,7 +71,7 @@
 					<div class="step" data-target="#information-part" id="step6">
 					  <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
 						<span class="bs-stepper-circle rounded-0 bg-success shadow-1">
-							<mdb-icon fas icon="thermometer-full" class="prefix"></mdb-icon>
+							<fa-icon [icon]="faThermometerFull"></fa-icon>
 						</span>
 						<span class="bs-stepper-label"></span>
 					  </button>
@@ -103,26 +105,27 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div class="bs-stepper-content">
 			<!-- your steps content here -->
 			<div id="logins-part" class="content fade" role="tabpanel" aria-labelledby="logins-part-trigger">
-				<div class="jumbotron customBox mx-auto w-75 rounded-0 text-light"> 
+				<div class="jumbotron customBox w-75 mx-auto rounded-0 text-light"> 
 					<h4 class="text-center text-light mt-n3"> {{typewriter_display }} </h4>
 					<div class="md-form form-sm ">
-					  <mdb-icon fas icon="user" class="prefix"></mdb-icon>
+					   <fa-icon [icon]="faUser" class="prefix"></fa-icon>
 					  <input mdbInput #name type="text" id="form1" class="form-control form-control-sm text-white">
 					  <label for="form1" class=""> Name ..</label>
 					</div>
 					<div class="md-form form-sm ">
-					  <mdb-icon fas icon="user-circle" class="prefix"></mdb-icon>
+					   <fa-icon [icon]="faUserCircle" class="prefix"></fa-icon>
 					  <input mdbInput type="number" #age id="form1" class="form-control form-control-sm text-white">
 					  <label for="form1" class=""> Age.. </label>
 					</div>
-					<div class="mx-auto w-25" >
+					<div class="mx-auto " >
 						<div class="" >
-							<button (click)="validate(name.value,age.value);changeTypeWriterText('step2')" type="button" class="step-trigger text-white pt-3 pb-3"   mdbBtn color="success" mdbWavesEffect>
-								 <mdb-icon fas icon="arrow-right" size="lg" class="prefix"></mdb-icon>
+							<button (click)="validate(name.value,age.value);changeTypeWriterText('step2')" type="button" class="step-trigger text-white"   mdbBtn color="success" mdbWavesEffect>
+								  <fa-icon [icon]="faArrowRight"></fa-icon>
 							</button>
 						</div>
 					</div>
@@ -140,16 +143,17 @@
 						<img [src]="micGif" class="img-fluid mx-auto micGif card-png" />
 						<h4 class="text-center text-secondary"> Listening ... </h4>
 					</div>
-					<div class="mx-auto w-25" >
+					<div class="" >
 						<div class="" >
-							<button (click)="prevBlock();changeTypeWriterText('step1')"  type="button" class="step-trigger text-white pt-3 pb-3"   mdbBtn color="success" mdbWavesEffect>
-								 <mdb-icon fas icon="arrow-left" size="lg" class="prefix"></mdb-icon>
+							<button (click)="prevBlock();changeTypeWriterText('step1')"  type="button" class="step-trigger text-white"   mdbBtn color="success" mdbWavesEffect>
+								  <fa-icon [icon]="faArrowLeft"></fa-icon>
 							</button>
-							<button (click)="nextBlock();changeTypeWriterText('step3')" type="button" class="step-trigger text-white pt-3 pb-3"   mdbBtn color="success" mdbWavesEffect>
-								 <mdb-icon fas icon="arrow-right" size="lg" class="prefix"></mdb-icon>
+							 <button (click)="nextBlock();changeTypeWriterText('step3')" type="button" class="step-trigger text-white "   mdbBtn color="success" mdbWavesEffect>
+								  <fa-icon [icon]="faArrowRight"></fa-icon>
 							</button>
 						</div>
 					</div>
+          
 				</div>
 			</div>
 			<div id="information-part-2" class="content" role="tabpanel" aria-labelledby="information-part-trigger-2">
@@ -162,10 +166,10 @@
 					<div class="mx-auto w-25" >
 						<div class="" >
 							<button (click)="prevBlock()" type="button" class="step-trigger text-white pt-3 pb-3"   mdbBtn color="success" mdbWavesEffect>
-								 <mdb-icon fas icon="arrow-left" size="lg" class="prefix"></mdb-icon>
+								 <fa-icon [icon]="faArrowLeft"></fa-icon>
 							</button>
 							<button (click)="nextBlock()" type="button" class="step-trigger text-white pt-3 pb-3"   mdbBtn color="success" mdbWavesEffect>
-								 <mdb-icon fas icon="arrow-right" size="lg" class="prefix"></mdb-icon>
+								 <fa-icon [icon]="faArrowRight"></fa-icon>
 							</button>
 						</div>
 					</div>
