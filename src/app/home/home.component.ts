@@ -9,26 +9,26 @@ export class HomeComponent implements OnInit {
   //for making steps 
   private stepper: Stepper;
   //for boxes section
-  doctorGif = "/assets/gifs/doctor1.gif";
+  doctorGif = "https://res.cloudinary.com/dhbxjmnbz/image/upload/v1585518439/gifs/doctor1_okapnd.gif";
   voiceOne = "";
   voiceError = "Your browser does not support the audio element.";
   //covid icon
-  covidIcon = "assets/images/covid-19.png";
+  covidIcon = "https://res.cloudinary.com/dhbxjmnbz/image/upload/v1585518438/images/covid-19_glg2fb.png";
   //cough icon
-  coughIcon = "assets/images/cough.png";
+  coughIcon = "https://res.cloudinary.com/dhbxjmnbz/image/upload/v1585518432/images/cough_ogltnq.png";
   //fatigue
-  fatigueIcon = "assets/images/tired-2.png";
+  fatigueIcon = "https://res.cloudinary.com/dhbxjmnbz/image/upload/v1585518434/images/tired-2_dcac7w.png";
   //breathing-difficulty icon
-  breathingdifficultyIcon = "assets/images/breathingdifficultyIcon.png";
+  breathingdifficultyIcon = "https://res.cloudinary.com/dhbxjmnbz/image/upload/v1585518430/images/breathingdifficultyIcon_qg0ojc.png";
   //mic gif
-  micGif = "assets/gifs/mic3.gif";
+  micGif = "https://res.cloudinary.com/dhbxjmnbz/image/upload/v1585518444/gifs/mic3_erifxi.gif";
   //type writer  variables
   private typewriter_text: string = "";
   //private typewriter_text_2: string = "Have you recently traveled to a high risk area for covid 19 ? /n  Yes or No";
   private typewriter_display: string = "";
   //paths variables of sounds for all steps
-  stepOneSound = "assets/sounds/prosody-volumex-softpro1585161573.mp3";
-  stepTwoSound = "assets/sounds/Have-you-recently-traveled-to-1585224696.mp3";
+  stepOneSound = "https://res.cloudinary.com/dhbxjmnbz/video/upload/v1585518427/sounds/prosody-volumex-softpro1585161573_mvt8ms.mp3";
+  stepTwoSound = "https://res.cloudinary.com/dhbxjmnbz/video/upload/v1585518427/sounds/Have-you-recently-traveled-to-1585224696_akxsv3.mp3";
   stepThreeSound = "assets/sounds/Have-you-recently-traveled-to-1585224696.mp3";
   stepFourSound = "assets/sounds/Have-you-recently-traveled-to-1585224696.mp3";
   stepFiveSound = "assets/sounds/Have-you-recently-traveled-to-1585224696.mp3";
