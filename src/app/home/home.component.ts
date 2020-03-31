@@ -86,11 +86,11 @@ export class HomeComponent implements OnInit {
   
   
   //get first step form data 
-  validate(name:string,age:number){
+  validate(name:string,age:number,step:string){
 	  if( (name != "" || name != null) && ( age > 1 && age < 150) ){
 		  this.errorAlert = "";
 		  this.errorMessage = "";
-		  this.nextBlock();
+		  this.nextBlock(step);
 	  }else {
 		  this.errorMessage = "step1Error";
 		  this.showError();
@@ -109,7 +109,9 @@ export class HomeComponent implements OnInit {
   }
   
   //next step 
-  nextBlock(){
+  nextBlock(step:string){
+    this.changeTypeWriterText(step);
+    console.log("yes");
 	  this.stepper.next();
   }
   //prev step
@@ -131,23 +133,12 @@ export class HomeComponent implements OnInit {
 	  if(text == "step1"){
 		  //this.stopVoice(this.stepTwoSound);
 		  this.prev = this.autoPlayVoice(this.stepOneSound);
-		  /* this.prev2.pause();
-		  this.prev3.pause();
-		  this.prev4.pause();
-		  this.prev5.pause();
-		  this.prev6.pause();
-		  this.prev7.pause();
-		  this.prev8.pause();
-		  this.prev9.pause();
-		  this.prev2.currentTime = 0;
-		  /*this.prev3.currentTime = 0;
-		  this.prev4.currentTime = 0;
-		  this.prev5.currentTime = 0;
-		  this.prev6.currentTime = 0;
-		  this.prev7.currentTime = 0;
-		  this.prev8.currentTime = 0;
-		  this.prev9.currentTime = 0;
-		  */this.typewriter_display = "";
+      if(this.prev2 != null){
+          this.prev2.pause();
+          this.prev2.currentTime = 0;
+      }
+		 
+		  this.typewriter_display = "";
 		  this.typewriter_text = "";
 		  this.typewriter_text = "Please Enter your Name , Age and Gender";
 		  this.typingCallback(this);
@@ -157,7 +148,10 @@ export class HomeComponent implements OnInit {
 			  
 		  }else {
 			  this.prev2 = this.autoPlayVoice(this.stepTwoSound);
-			  this.prev.pause();
+			  if(this.prev != null) {
+          this.prev.pause();
+          this.prev.currentTime = 0;
+        }
 			  /*this.prev3.pause();
 			  this.prev4.pause();
 			  this.prev5.pause();
@@ -165,8 +159,8 @@ export class HomeComponent implements OnInit {
 			  this.prev7.pause();
 			  this.prev8.pause();
 			  this.prev9.pause();
-			  */this.prev.currentTime = 0;
-			  /*this.prev3.currentTime = 0;
+			  this.prev.currentTime = 0;
+
 			  this.prev4.currentTime = 0;
 			  this.prev5.currentTime = 0;
 			  this.prev6.currentTime = 0;

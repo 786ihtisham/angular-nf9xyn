@@ -1,10 +1,10 @@
 <div class="w-50 mx-auto mt-3">
-	<div class="mx-auto doctorDiv w-25 ">
+	<div class="mx-auto doctorDiv">
 		<img [src]="doctorGif" class="img-fluid doctor"/>
 	</div>
 </div>
 <div class="jumbotron rounded-0 background text-white topCustomBox">
-	<div class="jumbotron rounded-0 w-100 mx-auto shadow-2 customBox">
+	<div class="jumbotron rounded-0 w-100 mx-auto shadow-2 customBox customR">
 		
 		<!-- Horizontal Steppers -->
 		<div class="bs-stepper" id="stepper1">
@@ -122,9 +122,9 @@
 					  <input mdbInput type="number" #age id="form1" class="form-control form-control-sm text-white">
 					  <label for="form1" class=""> Age.. </label>
 					</div>
-					<div class="mx-auto " >
+					<div class="mx-auto text-center" >
 						<div class="" >
-							<button (click)="validate(name.value,age.value);changeTypeWriterText('step2')" type="button" class="step-trigger text-white"   mdbBtn color="success" mdbWavesEffect>
+							<button (click)="validate(name.value,age.value,'step2');" type="button" class="step-trigger text-white mx-auto"   mdbBtn color="success" mdbWavesEffect>
 								  <fa-icon [icon]="faArrowRight"></fa-icon>
 							</button>
 						</div>
@@ -143,8 +143,18 @@
 						<img [src]="micGif" class="img-fluid mx-auto micGif card-png" />
 						<h4 class="text-center text-secondary"> Listening ... </h4>
 					</div>
-					<div class="" >
+					<div class="text-center" >
 						<div class="" >
+              <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" id="materialInline1" name="inlineMaterialRadiosExample" mdbInput>
+                <label class="form-check-label" for="materialInline1">1</label>
+              </div>
+
+              <!-- Material inline 2 -->
+              <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" id="materialInline2" name="inlineMaterialRadiosExample" mdbInput>
+                <label class="form-check-label" for="materialInline2">2</label>
+              </div>
 							<button (click)="prevBlock();changeTypeWriterText('step1')"  type="button" class="step-trigger text-white"   mdbBtn color="success" mdbWavesEffect>
 								  <fa-icon [icon]="faArrowLeft"></fa-icon>
 							</button>
